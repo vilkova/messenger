@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="js/index.js"></script>
+    <script src="lib/jquery/datetimepicker-master/jquery.js"></script>
+</head>
+<body>
+<div>
+    <h1>Insert Message</h1>
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <h3>User Name:</h3>
+                    <input id="name" class="field" type="text" width="400" title="User Name"/>
+                </div>
+                <div>
+                    <h3>Message:</h3>
+                    <input id="message" class="field" type="text" title="Message"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <button type="button" class="submitBtn"
+                        onclick="saveMessage(document.getElementsByTagName('input'))">Post Message
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

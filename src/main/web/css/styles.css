@@ -1,0 +1,32 @@
+﻿body {
+    font-family: "Trebuchet MS", "Helvetica", "Arial", "Verdana", "sans-serif";
+    font-size: 62.5%;
+}
+
+.submitBtn {
+    width: 120px;
+    background-color: silver;
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: center;
+    border: 5px solid silver;
+}
+
+.field {
+    background-color: white;
+    font-size: 10pt;
+    border: 5px solid silver;
+}
+
+#from, #to {
+    width: 150px;
+}
+
+#name {
+    width: 400px;
+}
+
+#message {
+    width: 400px;
+    height: 150px;
+}

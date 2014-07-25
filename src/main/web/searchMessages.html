@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/index.js"></script>
+    <link href="lib/jquery/datetimepicker-master/jquery.datetimepicker.css" rel="stylesheet"
+          type="text/css" />
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div>
+    <h1>
+        Search messages</h1>
+    <table>
+        <tr>
+            <td>
+                <h3>
+                    User Name:</h3>
+            </td>
+            <td colspan="2">
+                <input type="text" id="name" class="field" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Message Period:</h3>
+            </td>
+            <td align="right">
+                <label for="from">
+                    from</label>
+                <input type="text" id="from" class="field" name="from" />
+            </td>
+            <td align="right">
+                <label for="to">
+                    to</label>
+                <input type="text" id="to" class="field" name="to" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="right">
+                <button class="submitBtn" onclick="searchMessages()">
+                    Search</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="result"></div>
+</body>
+<script src="lib/jquery/datetimepicker-master/jquery.js" type="text/javascript"></script>
+<script src="lib/jquery/datetimepicker-master/jquery.datetimepicker.js" type="text/javascript"></script>
+<script src="lib/jquery/datetimepicker-master/moment.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $('#to, #from').datetimepicker({
+        format: 'YYYY-MM-DD hh:mm:ss',
+        formatDate: 'DD.MM.YYYY',
+        formatTime: 'h:mm'
+    });
+
+    var logic = function (currentDateTime) {
+        if (currentDateTime.getDay() == 6) {
+            this.setOptions({
+                minTime: '11:00'
+            });
+        } else
+            this.setOptions({
+                minTime: '8:00'
+            });
+    };
+
+    Date.parseDate = function (input, format) {
+        return moment(input, format).toDate();
+    };
+    Date.prototype.dateFormat = function (format) {
+        return moment(this).format(format);
+    };
+
+</script>
+</html>

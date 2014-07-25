@@ -1,0 +1,14 @@
+<jboss-deployment-structure>
+    <deployment>
+        <exclusions>
+            <module name="org.jboss.logging"/>
+            <module name="org.apache.log4j"/>
+            <module name="org.apache.commons.logging"/>
+            <module name="org.slf4j"/>
+            <module name="org.jboss.logging.jul-toslf4j-stub"/>
+        </exclusions>
+        <dependencies>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
+
